@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en"><!-- Do NOT put any content outside of the HTML tags-->
+	<head>
+		<title>Welly Wanders | Home Page</title>
+		<link rel= "stylesheet" type="text/css" href="style.css">
+		<!-- All Logo images created in https://hatchful.shopify.com/ -->
+		<link rel="shortcut icon" href="fav.png" />
+		<script src="myscripts.js"></script>
+	</head>
+
+    <!-- All content visible on the webpage will be inside the body tags below-->
+	<body>
+		<div id="mySidenav" class="sidenav">
+			<a href="index.html" id="home"><img src="icons8-home-50.png" alt="Home" width="25" height="25">			Home</a>
+			<a href="services.html" id="services"><img src="icons8-travel-book-50.png" alt="Services" width="25" height="25">		Services</a>
+			<a href="customerbooking.html" id="book"><img src="icons8-booking-50.png" alt="Book" width="25" height="25">		Book</a>
+			<a href="faq.html" id="faq"><img src="icons8-question-mark-50.png" alt="FAQ" width="25" height="25">		FAQ</a>
+		</div>
+		<img src="logo.png" alt="Welly Wanders" class="image">
+		<!-- Container for the image gallery https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+		<div class="slideshow-container">
+			<!-- Full-width images with number and caption text -->
+
+			<!-- Image used from https://3iqhm91wtiv21y4zza4dqwj2-wpengine.netdna-ssl.com/wp-content/uploads/New-Zealand-NI-Wellington-Kayakers-Whairepo-Lagoon-1440x961.jpg-->
+			<div class="mySlides fade">
+				<img src="kayak.jpg" style="width:100%" width="2048" height="800">
+			</div>
+
+			<!-- Image used from https://static1.squarespace.com/static/5940f2725016e1c79e469470/594123ea8748e39cae3a00aa/594124068748e39cae3a0689/1570507315071/?format=1500w-->
+			<div class="mySlides fade">
+				<img src="dock.jpeg" style="width:100%" width="2048" height="800">
+			</div>
+
+			<!-- Image used from https://www.corelogic.co.nz/sites/default/files/2019-10/1200x800wellington-nz-insurance-cost-rising.jpg-->
+			<div class="mySlides fade">
+				<img src="wellynight.jpg" style="width:100%" width="2048" height="800">
+			</div>
+
+			<!-- Image used from https://www.tourismexportcouncil.org.nz/wp-content/uploads/2012/03/TePapa.jpg-->
+			<div class="mySlides fade">
+				<img src="TePapa.jpg" style="width:100%" width="2048" height="800">
+			</div>
+
+			<!-- Image used from https://www.rydges.com/accommodation/new-zealand/wellington-airport/wp-content/uploads/sites/71/2018/09/wellington-cable-car-sunrise.jpg-->
+			<div class="mySlides fade">
+				<img src="cart.jpg" style="width:100%" width="2048" height="800">
+			</div>
+
+
+		</div><br>
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+		<h1>About Us</h1>
+		<div id="main">
+			<h2>Who Are We?</h2>
+			<p>Welly Wanders is a 100%NZ owned and operated business focused on providing exciting and
+				unforgettable tours that are suited to any group. These tours could vary from embracing the
+				artistic aspects of Wellington or learning about the culture and history of the native maori in
+				Aotearoa (New Zealand). However, if you and your group happen to prefer more adrenaline
+				based activities or maybe even enjoying a mixture of everything, we can meet your needs! </p>
+			<br>
+			<div id="buttons">
+				<button onclick="location.href='services.html'" class="Services"><a href="services.html" style="text-decoration: none; color: #FFFFFF">
+					Services</a></button>
+				<button onclick="location.href='customerbooking.html'" class="bookNow"><a href="customerbooking.html" style="text-decoration: none; color: #FFFFFF">
+					Book Now</a></button>
+			</div>
+			<br>
+			<h2>Our Goal</h2>
+			<p>We strive to offer environmentally sustainable tours in and around the Wellington region.
+				It is our priority to maintain a high sustainability model which means all transport we provide must
+				be carbon neutral.
+				Whether it be electric cars, bikes, or even scooters, you can rest assured that we are working
+				together towards a green future!</p>
+			<br>
+			<h2>The Team</h2>
+			<!-- https://www.w3schools.com/howto/howto_css_profile_card.asp -->
+			<div class="team">
+				<div class="card">
+					<h1>Bill Colenso</h1>
+					<p class="title" style="text-align: center;">Victoria University of Wellington</p>
+					<p style="text-align: center;">Co-CEO & Founder <br>Welly Wanders</p>
+					<p><button><a href="mailto:billColenso@WellyWanders.com" style="text-decoration: none;
+					color: #FFFFFF">Contact</a></button></p>
+				</div>
+
+				<div class="card">
+					<h1>Xiulan Ma</h1>
+					<p class="title" style="text-align: center;">Victoria University of Wellington</p>
+					<p style="text-align: center;">Co-CEO & Founder <br>Welly Wanders</p>
+					<p><button><a href="mailto:xiulanMa@WellyWanders.com" style="text-decoration: none; color: #FFFFFF">Contact</a></button></p>
+				</div>
+			</div>
+			<br>
+
+		</div>
+		<br>
+		<div class="footer">
+			<div class="contact">
+				Contact Us:
+				<ul style="list-style-type: none;">
+					<li><img src="icons8-important-mail-100.png" alt="mail" width="25" height="25">  <a href="mailto:support@WellyWanders.com">contact@WellyWanders.com</a>
+					<li><img src="icons8-phone-100.png" alt="phone" width="25" height="25">  <a href="tel:+64-022-412-1212">+6422412444</a></li>
+					<li><img src="icons8-facebook-circled-100.png" alt="facebook" width="25" height="25">  <a href="https://www.facebook.com/">@WellyWanders</a></li>
+					<li><img src="icons8-instagram-100.png" alt="instagram" width="25" height="25">  <a href="https://www.instagram.com/">@WellyWanders</a></li>
+				</ul>
+			</div>
+			<div class="links">
+				Links:
+				<ul style="list-style-type: none;">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="customerbooking.html">Book</a></li>
+					<li><a href="faq.html">FAQ</a></li>
+				</ul>
+			</div>
+		</div>
+		<a target="_blank" href="https://icons8.com/icons/set/home">Home</a>, <a target="_blank" href="https://icons8.com/icons/set/question-mark">Question Mark</a> and other icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+		<script src="myscripts.js"></script>
+	</body>
+</html> 

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+
+<html lang="en"><!-- Do NOT put any content outside of the HTML tags-->
+	<head>
+		<title>Welly Wanders | Book</title>
+		<link rel= "stylesheet" type="text/css" href="style.css">
+		<!-- All Logo images created in https://hatchful.shopify.com/ -->
+		<link rel="shortcut icon" href="fav.png" />
+		<script src="myscripts.js"></script>
+	</head>
+
+<!-- All content visible on the webpage will be inside the body tags below-->
+<body>
+	<div id="mySidenav" class="sidenav">
+		<a href="index.html" id="home"><img src="icons8-home-50.png" alt="Home" width="25" height="25">			Home</a>
+		<a href="services.html" id="services"><img src="icons8-travel-book-50.png" alt="Services" width="25" height="25">		Services</a>
+		<a href="customerbooking.html" id="book"><img src="icons8-booking-50.png" alt="Book" width="25" height="25">		Book</a>
+		<a href="faq.html" id="faq"><img src="icons8-question-mark-50.png" alt="FAQ" width="25" height="25">		FAQ</a>
+	</div>
+
+	<img src="logo.png" alt="Welly Wanders" class="image">
+	<!-- Container for the image gallery https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+	<div class="slideshow-container">
+		<!-- Full-width images with number and caption text -->
+
+		<!-- Image used from https://3iqhm91wtiv21y4zza4dqwj2-wpengine.netdna-ssl.com/wp-content/uploads/New-Zealand-NI-Wellington-Kayakers-Whairepo-Lagoon-1440x961.jpg-->
+		<div class="mySlides fade">
+			<img src="kayak.jpg" style="width:100%" width="2048" height="800">
+		</div>
+
+		<!-- Image used from https://static1.squarespace.com/static/5940f2725016e1c79e469470/594123ea8748e39cae3a00aa/594124068748e39cae3a0689/1570507315071/?format=1500w-->
+		<div class="mySlides fade">
+			<img src="dock.jpeg" style="width:100%" width="2048" height="800">
+		</div>
+
+		<!-- Image used from https://www.corelogic.co.nz/sites/default/files/2019-10/1200x800wellington-nz-insurance-cost-rising.jpg-->
+		<div class="mySlides fade">
+			<img src="wellynight.jpg" style="width:100%" width="2048" height="800">
+		</div>
+
+		<!-- Image used from https://www.tourismexportcouncil.org.nz/wp-content/uploads/2012/03/TePapa.jpg-->
+		<div class="mySlides fade">
+			<img src="TePapa.jpg" style="width:100%" width="2048" height="800">
+		</div>
+
+		<!-- Image used from https://www.rydges.com/accommodation/new-zealand/wellington-airport/wp-content/uploads/sites/71/2018/09/wellington-cable-car-sunrise.jpg-->
+		<div class="mySlides fade">
+			<img src="cart.jpg" style="width:100%" width="2048" height="800">
+		</div>
+
+
+	</div><br>
+	<!-- The dots/circles -->
+	<div style="text-align:center">
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+	<!-- Container for the checkout https://www.w3schools.com/howto/howto_css_checkout_form.asp -->
+	<h1>Create a Booking</h1>
+	<div class="row">
+		<div class="col-75">
+			<div class="container">
+				<form action="" method="post" onsubmit="return book(this.form);">
+					<div class="radio">
+						<h2>Booking Type</h2>
+						<label for="date">Date:</label><input type="date" required id="date" min="2020-01-02" max="2025-01-01"><br>
+						<input type="radio" id="AnC1day" name="booking type" checked value="6.99" oninput="calcTour()">
+						<label for="AnC1day">Arts and Culture 1 Day Tour - $6.99 Per Person</label><br>
+						<input type="radio" id="AnC2day" name="booking type" value="32.99" oninput="calcTour()">
+						<label for="AnC2day">Arts and Culture 2 Day Tour - $32.99 Per Person</label><a href="services.html">Custom Tour</a><br>
+						<input type="radio" id="AnC3day" name="booking type" value="59.99" oninput="calcTour()">
+						<label for="AnC3day">Arts and Culture 3 Day Tour - $59.99 Per Person</label><br>
+						<input type="radio" id="A1day" name="booking type" value="19.99" oninput="calcTour()">
+						<label for="A1day">Adrenaline 1 Day Tour - $19.99 Per Person</label><br>
+						<input type="radio" id="A2day" name="booking type" value="45.99" oninput="calcTour()">
+						<label for="A2day">Adrenaline 2 Day Tour - $45.99 Per Person</label><br>
+						<input type="radio" id="V1day" name="booking type" value="24.99" oninput="calcTour()">
+						<label for="V1day">Variety 1 Day Tour - $24.99 Per Person</label><br>
+						<br>
+						<label for="people">Group Size</label>
+						<select oninput="calcTour()" id="people">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+						</select>
+						<hr>
+						<h4 id="cost">Total Cost: $29.99</h4>
+						<hr>
+					</div>
+					<div class="row">
+						<div class="col-50">
+							<h2>Billing Address</h2>
+							<label for="fname"><i class="fa fa-user"></i> Full Name</label>
+							<input type="text" required id="fname" name="firstname" placeholder="John M. Doe">
+							<label for="email"><i class="fa fa-envelope"></i> Email</label>
+							<input type="text" required id="email" name="email" placeholder="john@example.com">
+							<label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+							<input type="text" required id="adr" name="address" placeholder="542 W. 15th Street">
+							<label for="city"><i class="fa fa-institution"></i> City</label>
+							<input type="text" required id="city" name="city" placeholder="Auckland">
+
+							<div class="row">
+								<div class="col-50">
+									<label for="state">State</label>
+									<input type="text" required id="state" name="state" placeholder="Manawatu">
+								</div>
+								<div class="col-50">
+									<label for="zip">Zip</label>
+									<input type="text" required id="zip" name="zip" placeholder="5004">
+								</div>
+							</div>
+							<label>
+								<input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+							</label>
+						</div>
+
+						<div class="col-50">
+							<h2>Payment</h2>
+							<label for="cname">Name on Card</label>
+							<input type="text" required id="cname" name="cardname" placeholder="John More Doe">
+							<label for="ccnum">Credit card number</label>
+							<input type="text" required id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+							<label for="expmonth">Exp Month</label>
+							<input type="text" required id="expmonth" name="expmonth" placeholder="September">
+
+							<div class="row">
+								<div class="col-50">
+									<label for="expyear">Exp Year</label>
+									<input type="text" required id="expyear" name="expyear" placeholder="2023">
+								</div>
+								<div class="col-50">
+									<label for="cvv">CVV</label>
+									<input type="text" required id="cvv" name="cvv" placeholder="352">
+								</div>
+							</div>
+						</div>
+					</div>
+					<input type="submit" value="Book Now" id="bookNow" class="btn">
+				</form>
+			</div>
+		</div>
+
+	</div>
+	<div class="footer">
+		<div class="contact">
+			Contact Us:
+			<ul style="list-style-type: none;">
+				<li><img src="icons8-important-mail-100.png" alt="mail" width="25" height="25">  <a href="mailto:support@WellyWanders.com">contact@WellyWanders.com</a>
+				<li><img src="icons8-phone-100.png" alt="phone" width="25" height="25">  <a href="tel:+64-022-412-1212">+6422412444</a></li>
+				<li><img src="icons8-facebook-circled-100.png" alt="facebook" width="25" height="25">  <a href="https://www.facebook.com/">@WellyWanders</a></li>
+				<li><img src="icons8-instagram-100.png" width="25" height="25">  <a href="https://www.instagram.com/">@WellyWanders</a></li>
+			</ul>
+		</div>
+		<div class="links">
+			Links:
+			<ul style="list-style-type: none;">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="customerbooking.html">Book</a></li>
+				<li><a href="faq.html">FAQ</a></li>
+			</ul>
+		</div>
+	</div>
+	<a target="_blank" href="https://icons8.com/icons/set/home">Home</a>, <a target="_blank" href="https://icons8.com/icons/set/question-mark">Question Mark</a> and other icons by <a target="_blank" href="https://icons8.com">Icons8</a>
+	<script src="myscripts.js"></script>
+</body>
+</html>
