@@ -1,5 +1,5 @@
-# INFO101_Website_Project
-Just a website I created for an assignment in INFO101
+# Welly Wanders
+A simple pure CSS website for an assignment in my first year of study.
 
 Visit it here: https://tazbruce.github.io/
 Cheers
