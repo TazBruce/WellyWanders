@@ -1,4 +1,4 @@
 # Welly Wanders
-A pure CSS website I created in my first year of study. (INFO101 Project)
+A pure CSS website for a simple touring business. (INFO101 Project)
 
 Visit it here: https://tazbruce.github.io/WellyWanders/
